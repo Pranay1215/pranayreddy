@@ -1,0 +1,112 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Pranay1215/pranayreddy/blob/main/Welcome_To_Colab.ipynb%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vwnNlNIEwoZ8"
+      },
+      "source": [
+        "To learn more about accelerating pandas on Colab, see the [10 minute guide](https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cudf_pandas_colab_demo.ipynb) or\n",
+        " [US stock market data analysis demo](https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cudf_pandas_stocks_demo.ipynb)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "import pandas as pd\n",
+        "drive.mount('/content/drive/')\n",
+        "df=pd.read_excel('/Even.xlsx',sheet_name=1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EjG_lXKKUp_S",
+        "outputId": "f5f89cf0-1445-4a4b-cc5b-fbf3ac3c18cc"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Drive already mounted at /content/drive/; to attempt to forcibly remount, call drive.mount(\"/content/drive/\", force_remount=True).\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print (df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TowX8-VGVsJM",
+        "outputId": "4653b8fa-7c3e-4a09-d598-9a1f84fdc7e0"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Employee_Name  Employee_ID   Job_Role  Phone_Number  \\\n",
+            "0      Jane Miller         8797  Developer  3.801881e+09   \n",
+            "1    Michael Brown         6540    Manager  7.904752e+09   \n",
+            "2   Sarah Anderson         2353  Developer  9.463822e+09   \n",
+            "3    Chris Johnson         6392   Engineer  8.727628e+09   \n",
+            "4      Laura Smith         1653    Analyst  7.750284e+08   \n",
+            "..             ...          ...        ...           ...   \n",
+            "95     Emily Smith         5111        NaN  4.463884e+09   \n",
+            "96    Sarah Wilson         7388   Engineer  7.455009e+09   \n",
+            "97             NaN         3773    Manager  4.515526e+08   \n",
+            "98     Sarah Smith         1442    Analyst  3.294945e+09   \n",
+            "99   Michael Jones         3490    Analyst  9.425622e+09   \n",
+            "\n",
+            "                        Email_ID  Total_Work_Hour_per_Month  Salary_per_Month  \n",
+            "0       emily.taylor@example.com                     9999.0               NaN  \n",
+            "1            john.brown@test.net                      160.0           11200.0  \n",
+            "2        sarah.wilson@sample.org                     9999.0           -5000.0  \n",
+            "3          john.jones@sample.org                      160.0            8000.0  \n",
+            "4          sarah.taylor@test.net                     9999.0               NaN  \n",
+            "..                           ...                        ...               ...  \n",
+            "95          james.davis@test.net                      -10.0          100000.0  \n",
+            "96      john.johnson@example.com                        NaN          100000.0  \n",
+            "97       david.miller@sample.org                        NaN          100000.0  \n",
+            "98  jessica.anderson@example.com                      -10.0           -5000.0  \n",
+            "99        john.miller@sample.org                        NaN               NaN  \n",
+            "\n",
+            "[100 rows x 7 columns]\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
